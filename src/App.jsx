@@ -2,6 +2,8 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { Home } from "./components/pages/Home";
 import { Navigation } from "./components/Navbar";
+import { Repositories } from "./components/pages/Repositories";
+
 
 
 
@@ -12,8 +14,10 @@ function GitProfileFinder (){
       <BrowserRouter>
       <Navigation/>
       
+      
       <Routes>
         <Route path="/Home" element={<Home/>}/>
+        <Route path="/Repositories" element={<Repositories/>} />
       
       </Routes>
 
