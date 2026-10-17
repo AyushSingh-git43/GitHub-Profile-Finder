@@ -1,14 +1,18 @@
 import { useState } from "react"
 import GitHubLogo from "../../assets/GitHub_Invertocat_White.png"
 
+
 export function Home(){
     const [username,setusername]= useState("")
+    const [text,setText] = useState([])
 
     function Search(e){
 
         e.preventDefault();
         console.log({username});
-        setusername("")
+        setusername("");
+
+        setText([...text,username])
 
 
     }
@@ -36,6 +40,7 @@ export function Home(){
                     <button type="submit"
                     className="text-white bg-blue-600 hover:bg-blue-500 font-medium px-7 py-3.5 transition-colors"
                     >Search</button>
+                    
                 </form>
 
             </div>
